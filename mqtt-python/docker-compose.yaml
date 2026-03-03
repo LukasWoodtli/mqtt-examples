@@ -5,5 +5,16 @@ services:
       - ./mosquitto/config:/mosquitto/config:ro
       - ./mosquitto/data:/mosquitto/data:rw
       - ./mosquitto/log:/mosquitto/log:rw
+    hostname: mosquitto-host
     ports:
       - "1883:1883"
+      - "8883:8883"
+
+  python-client:
+    image: python-client-image
+    build:
+      context: clients
+      dockerfile: client.Dockerfile
+    hostname: paho-client
+    depends_on:
+      - mosquitto
