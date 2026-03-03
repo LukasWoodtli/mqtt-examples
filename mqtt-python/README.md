@@ -1,0 +1,1 @@
+Examples inspired by [Hands-On MQTT Programming with Python](https://www.packtpub.com/en-us/product/hands-on-mqtt-programming-with-python-9781789138542)
